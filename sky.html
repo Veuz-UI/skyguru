@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyguru</title>
+    <link rel="stylesheet" href="./css/libs/bootstrap.min.css">
+    <link rel="icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            height: 120vh;
+            /* background: linear-gradient(to bottom,  rgba(220, 221, 222, 1) 20%,rgb(196 196 196) 100%); */
+            background: linear-gradient(to top, #c4c4c4 65%, #DCDDDE 100%);
+
+        }
+
+        #cloud,
+        #bird {
+            position: absolute;
+            left: 0;
+        }
+
+        #cloud {
+            top: 26%;
+            left: -27%;
+        }
+
+        #bird {
+            top: 21%;
+            left: -12%;
+
+        }
+
+        .spiral-ring {
+            background-image: url('./images/animation-images/spiral-ring.png');
+            background-size: cover;
+            background-position: center;
+            width: 40vw;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+
+        .window-wrap {
+            padding-top: 400px;
+        }
+
+        .window-1 {
+            position: relative;
+        }
+
+        .view-1,
+        .view-2,
+        .view-3 {
+            position: absolute;
+            width: 100px;
+            height: 145px;
+            object-fit: cover;
+            border-radius: 40px;
+            top: 160px;
+            left: 80px;
+            z-index: -1;
+        }
+
+        #text {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 18px;
+            line-height: 28x;
+        }
+
+        #text span {
+            color: #155DFF;
+        }
+
+        .animation .logo {
+            position: fixed;
+            top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+
+
+    <section class="animation">
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html"><img src="./images/animation-images/blue-logo.png" alt=""></a>
+            </div>
+            <img src="./images/animation-images/Cloud.png" alt="" id="cloud">
+            <img src="./images/animation-images/birds.png" alt="" id="bird">
+            <div class="d-flex justify-content-center window-wrap">
+                <div class="spiral-ring"></div>
+                <div class="window-1">
+                    <img src="./images/animation-images/window.png" alt="">
+                    <img src="./images/animation-images/view-1.png" alt="" class="view-1">
+                </div>
+                <div class="window-1">
+                    <img src="./images/animation-images/window.png" alt="">
+                    <img src="./images/animation-images/view-2.png" alt="" class="view-2">
+                </div>
+                <div class="window-1">
+                    <img src="./images/animation-images/window.png" alt="">
+                    <img src="./images/animation-images/view-3.png" alt="" class="view-3">
+                </div>
+            </div>
+            <div>
+                <div id="text" class="text-center"> Attention Passengers:<br>
+                    <span>Your journey is about to begin.</span> <br>
+                    Please ensure your seatbelts are fastened and <br>
+                    your window shades are down</div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/libs/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./js/libs/gsap.min.js"></script>
+    <script src="./js/libs/trigger.min.js"></script> -->
+    <script src="./js/script.js"></script>
+
+
+
+</body>
+
+</html>
